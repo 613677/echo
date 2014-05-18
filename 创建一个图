@@ -1,0 +1,34 @@
+　　
+　　typedef struct
+　　{
+　　	VerType Ver[MaxVer];
+　　	int numOfVer;
+　　	int edge[MaxVer][MaxVer];
+　　	int numOfEdges;
+}AdjMWGraph;
+　　
+　　
+　　
+　　void CreatGraph(AdjMWGraph *G,VerType Ver[],int vn,int E[][3],int en)//创建图
+　　{
+　　	int i,k;
+　　	InitGraph(G,vn);//生成vn*vn的图
+　　	for(i=0;i<vn;i++)
+　　	InsertVer(G,Ver[i]);//插入vn个顶点
+　　	for(k=0;k<en;k++)
+　　	InsertArc(G,E[k][0],E[k][1],E[k][2]);//插入en条边,E[k][0]表示开始的顶点,E[k][1]表示结束的顶点,E[k][2]表示此边的权重即路径的长度
+　　}
+　　
+　　
+　　void InitGraph(AdjMWGraph *G,int vn)//初始化
+　　{
+　　	int i,j;
+　　	for(i=0;i<vn;i++)
+　　	for(j=0;j<vn;j++)
+　　		{
+　　			if(i==j) G->edge[i][j]=0;
+　　			else G->edge[i][j]=MaxWeight;
+　　		}
+　　	G->numOfVer=0;	
+　　	G->numOfEdges=0;
+　　｝
