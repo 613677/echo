@@ -1,7 +1,7 @@
 　　
-　　typedef struct
+　　typedef struct      //是用邻接矩阵储存信息的图
 　　{
-　　	VerType Ver[MaxVer];
+　　	VerType Ver[MaxVer];//顶点集合
 　　	int numOfVer;
 　　	int edge[MaxVer][MaxVer];
 　　	int numOfEdges;
@@ -32,3 +32,25 @@
 　　	G->numOfVer=0;	
 　　	G->numOfEdges=0;
 　　｝
+　　
+　　
+　　
+　　void InsertVer(AdjMWGraph *G,VerType cv)//插入顶点
+　　{
+　　	G->Ver[G->numOfVer]=cv;
+　　	G->numOfVer++;
+　　}
+　　
+　　
+　　void InsertArc(AdjMWGraph *G,int v1,int v2,int weight)//插入边<v1，v2>，边<v1，v2>的权重为weight
+　　{
+　　	if(v1<0||v1>G->numOfVer||v2<0||v2>G->numOfVer)
+　　	{
+　　		printf("参数v1或v2越界出错！\n");
+　　		exit(1);
+　　	}
+　　	G->edge[v1][v2]=weight;
+　　	G->numOfEdges++;
+　　}
+　　
+　　
