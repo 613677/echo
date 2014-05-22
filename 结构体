@@ -1,0 +1,10 @@
+　　#include<stdio.h>
+　　#include<stdlib.h>
+　　typedef struct
+　　{
+　　	int node;//景点代号
+　　	char name[20];//景点名称
+　　	char information[200];//景点简介
+　　}VerType;
+
+   
