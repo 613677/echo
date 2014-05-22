@@ -1,10 +1,18 @@
 　　#include<stdio.h>
 　　#include<stdlib.h>
-　　typedef struct
+　　
+　  typedef char DataType;
+　　#define MaxVer 100
+　　#define MaxEdge 45
+　　#define MaxWeight 50000
+　　#define MAX_Vertices 10
+    #define INT_MAX 1000
+    
+    　　typedef struct
 　　{
 　　	int node;//景点代号
 　　	char name[20];//景点名称
 　　	char information[200];//景点简介
 　　}VerType;
-
-   
+    
+    
