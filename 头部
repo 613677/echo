@@ -1,18 +1,16 @@
-　　#include<stdio.h>
-　　#include<stdlib.h>
-　　
-　  typedef char DataType;
-　　#define MaxVer 100
-　　#define MaxEdge 45
-　　#define MaxWeight 50000
-　　#define MAX_Vertices 10
-    #define INT_MAX 1000
-    
-    　　typedef struct
-　　{
-　　	int node;//景点代号
-　　	char name[20];//景点名称
-　　	char information[200];//景点简介
-　　}VerType;
-    
+#include<stdio.h>
+#include<stdlib.h>
+#include<math.h>
+
+#define max     500
+#define num     50
+#define maxdist 10000
+
+typedef struct ZJGSU
+{            
+     int  code;
+     char name[num];
+     char pr[num];
+}ZJGSU; /*定义结构体所包含的景点代码、名称、简介*/
+
     
