@@ -188,4 +188,3 @@ void m(void)
 	printf("   |   |     |\n");
 	printf("   \\---5-----/\n\n");
 }
-　　
