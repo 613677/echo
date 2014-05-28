@@ -1,7 +1,9 @@
+
 #include<stdio.h>
 #include<string.h>
 #include<math.h>
 #include<process.h>
+#include<iostream>
 
 void m(void);		//平面图	
 void m2(void);		//主菜单
@@ -84,6 +86,7 @@ int main()
 					{8,"第一田径场","足球场，篮球场，塑胶跑道，用于学生日常锻炼休闲"},{9,"金沙港","生活园区二"},
 	 {10,"钱江湾","生活园区一"}};		/*景点包含的信息*/ 
      int i,j,n=11;
+     char s;
      int d[num],p[num],a[num][num];
      for(i=0;i<n;i++)                      
 		for(j=0;j<n;j++)
@@ -106,7 +109,7 @@ int main()
 	 printf("  ##   浙江工商大学下沙校区校园导游图   ##\n");
 	 printf("  ##                                    ##\n");
 	 printf("  ##                                    ##\n");
-	 printf("  ########################################\n"
+	 printf("  ########################################\n");			 	  
 	 m2();	     	//主菜单
      do
      {
@@ -157,7 +160,10 @@ int main()
 		 }
 	 }
 	 while(getchar());
+	 s=getchar();
+     if(s=='p')exit(0);
 	 return 0;
+	 
 }
 
 void m2(void)			//主菜单
